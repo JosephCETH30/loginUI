@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #f2f2f2;
+	font-family: Arial, sans-serif;
+}
+
+body.center {
+  display: flex;
+  justify-content: center; /* mengatur posisi horizontal */
+  align-items: center; /* mengatur posisi vertical */
+  height: 100vh; /* mengatur tinggi body agar sejajar dengan viewport */
+}
+
+.container {
+	;
+	 width: 100%;
+  max-width: 400px; /* lebar container */
+  margin: 100px auto; /* mengatur margin agar container berada di tengah */
+  padding: 20px;
+  box-sizing: border-box;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+	text-align: center;
+	margin-top: 0;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+	padding: 10px;
+	border: 2px solid #3a6cf4;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+}
+
+button[type="submit"] {
+/*	margin-top: 100px;*/
+	padding: 10px;
+	background-color: #3a6cf4;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 100px;
+}
+
+button[type="submit"]:hover {
+	background-color: #fff;
+	color: #3a6cf4;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 1px solid #3a6cf4;
+	transform: scaleX(10px);
+}
+
+.g-recaptcha {
+	margin: 10px 0;
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		max-width: 100%;
+	}
+}

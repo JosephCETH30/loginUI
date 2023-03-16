@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Login</h1>
+		<form action="login.php" method="post">
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+			<!-- <div class="g-recaptcha" data-sitekey=" 6LcshgUlAAAAAC0dXXc1NX73QF_ZIsmWfc6Nm0mv"></div> -->
+
+			<h3 style="color: black; display: flex; justify-content: center; margin-top: 25px;">Untuk Recaptcha</h3>
+
+			<button type="submit">Login</button>
+		</form>
+	</div>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script src="https://www.google.com/recaptcha/enterprise.js?render=#"></script>
+	<script>
+		grecaptcha.enterprise.ready(function() {
+    		grecaptcha.enterprise.execute('#', {action: 'login'}).then(function(token) {
+       		...
+    		});
+		});
+</script>
+</body>
+</html>
